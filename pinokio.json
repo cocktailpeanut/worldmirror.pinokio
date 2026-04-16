@@ -1,0 +1,27 @@
+{
+  "title": "WorldMirror 2.0",
+  "description": "Pinokio launcher for the currently released WorldMirror 2.0 reconstruction demo from HY-World 2.0.",
+  "icon": "icon.svg",
+  "links": [{
+    "title": "Project",
+    "links": [{
+      "title": "GitHub",
+      "value": "https://github.com/Tencent-Hunyuan/HY-World-2.0"
+    }, {
+      "title": "Hugging Face",
+      "value": "https://huggingface.co/tencent/HY-World-2.0"
+    }, {
+      "title": "Project Page",
+      "value": "https://3d-models.hunyuan.tencent.com/world/"
+    }, {
+      "title": "Official Demo",
+      "value": "https://3d.hunyuan.tencent.com/sceneTo3D"
+    }]
+  }, {
+    "title": "Tencent Hunyuan",
+    "links": [{
+      "title": "X",
+      "value": "https://x.com/TencentHunyuan"
+    }]
+  }]
+}
