@@ -2,7 +2,7 @@ module.exports = {
   version: "7.0",
   title: "WorldMirror 2.0",
   description: "[NVIDIA] Pinokio launcher for the released WorldMirror 2.0 reconstruction app from HY-World 2.0. Uses a cu128 PyTorch baseline with gsplat from PyPI/JIT. https://github.com/Tencent-Hunyuan/HY-World-2.0",
-  icon: "icon.svg",
+  icon: "icon.png",
   menu: async (kernel, info) => {
     const installed = info.exists("app/env")
     const running = {
