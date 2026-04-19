@@ -1,6 +1,6 @@
 {
   "title": "WorldMirror 2.0",
-  "description": "Pinokio launcher for the currently released WorldMirror 2.0 reconstruction demo from HY-World 2.0.",
+  "description": "Pinokio launcher for the currently released WorldMirror 2.0 reconstruction demo from HY-World 2.0, using a cu128 PyTorch baseline with gsplat from PyPI/JIT.",
   "icon": "icon.svg",
   "links": [{
     "title": "Project",

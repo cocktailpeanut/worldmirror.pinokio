@@ -21,5 +21,5 @@ torchmetrics
 uniception
 safetensors
 numpy<2.0.0
-gsplat @ https://github.com/nerfstudio-project/gsplat/releases/download/v1.5.3/gsplat-1.5.3+pt24cu124-cp310-cp310-win_amd64.whl ; platform_system == "Windows" and platform_machine == "AMD64"
-gsplat @ https://github.com/nerfstudio-project/gsplat/releases/download/v1.5.3/gsplat-1.5.3+pt24cu124-cp310-cp310-linux_x86_64.whl ; platform_system == "Linux" and platform_machine == "x86_64"
+# gsplat is installed in install.js so the launcher can keep
+# torch setup in torch.js and let gsplat use the PyPI/JIT path.

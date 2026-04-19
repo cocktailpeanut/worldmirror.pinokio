@@ -4,6 +4,10 @@ Pinokio launcher for the currently released WorldMirror 2.0 demo from Tencent Hu
 
 As of the upstream HY-World 2.0 README entry dated April 16, 2026, only the WorldMirror 2.0 reconstruction code and weights are open-sourced. The full text/image-to-world generation pipeline is still marked "Coming Soon". This launcher therefore packages the released WorldMirror 2.0 Gradio app.
 
+## Install Stack
+
+This launcher standardizes on a single NVIDIA install path: `torch==2.7.0`, `torchvision==0.22.0`, `torchaudio==2.7.0`, PyTorch CUDA `cu128`, the matching `flash-attn` wheel, and `gsplat==1.5.3` from PyPI with its normal JIT path.
+
 ## What This Launcher Does
 
 - Clones the official `Tencent-Hunyuan/HY-World-2.0` code into `app/`
@@ -14,12 +18,13 @@ As of the upstream HY-World 2.0 README entry dated April 16, 2026, only the Worl
 ## Requirements
 
 - NVIDIA GPU recommended by upstream
-- CUDA 12.4 recommended by upstream
 - Python 3.10 environment managed by Pinokio
 - `flash-attn` must install successfully because the released upstream code imports it directly
-- On Windows, this launcher installs the matching prebuilt wheel from `lldacing/flash-attention-windows-wheel` on Hugging Face for `torch==2.4.0`, CUDA 12.4, and Python 3.10
+- This launcher uses PyTorch `2.7.0/cu128` as its single NVIDIA baseline
+- On Windows, this launcher installs the matching prebuilt `cu128` FlashAttention wheel for Python 3.10
+- `gsplat` is installed from PyPI instead of a prebuilt pinned wheel; if it later needs to JIT-build CUDA code on first use, you may also need a local CUDA 12.8+ toolchain available to that environment
 
-The upstream repository also splits some binary dependencies by platform. This launcher normalizes that by using Windows/Linux-specific `gsplat` and `onnxruntime` selections in `requirements.pinokio.txt`.
+The upstream repository also splits some binary dependencies by platform. This launcher keeps the `onnxruntime` split in `requirements.pinokio.txt`, while `install.js` installs `gsplat` separately so the torch stack stays owned by `torch.js`.
 
 ## How To Use
 

@@ -20,14 +20,14 @@ module.exports = {
       }
     },
     {
-      method: "shell.run",
+      method: "script.start",
       params: {
-        venv: "env",
-        path: "app",
-        bluefairy: "off",
-        message: [
-          "uv pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu124",
-        ]
+        uri: "torch.js",
+        params: {
+          venv: "env",
+          path: "app",
+          flashattention: true
+        }
       }
     },
     {
@@ -40,31 +40,13 @@ module.exports = {
         ]
       }
     },
-
     {
-      when: "{{platform === 'win32'}}",
       method: "shell.run",
       params: {
         venv: "env",
         path: "app",
         message: [
-          "uv pip install --no-deps https://huggingface.co/lldacing/flash-attention-windows-wheel/resolve/main/flash_attn-2.7.0.post2%2Bcu124torch2.4.0cxx11abiFALSE-cp310-cp310-win_amd64.whl"
-        ]
-      }
-    },
-    {
-      when: "{{platform !== 'win32'}}",
-      method: "shell.run",
-      params: {
-        build: true,
-        env: {
-          USE_NINJA: 0,
-          DISTUTILS_USE_SDK: 1
-        },
-        venv: "env",
-        path: "app",
-        message: [
-          "uv pip install flash-attn --no-build-isolation"
+          "uv pip install gsplat==1.5.3"
         ]
       }
     },
