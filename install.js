@@ -1,4 +1,7 @@
 module.exports = {
+  requires: {
+    bundle: "ai"
+  },
   run: [
     {
       when: "{{!exists('app')}}",
@@ -50,11 +53,5 @@ module.exports = {
         ]
       }
     },
-    {
-      method: "fs.link",
-      params: {
-        venv: "app/env"
-      }
-    }
   ]
 }
