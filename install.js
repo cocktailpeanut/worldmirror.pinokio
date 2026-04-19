@@ -16,11 +16,31 @@ module.exports = {
         path: "app",
         message: [
           "uv pip install setuptools wheel packaging ninja",
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        bluefairy: "off",
+        message: [
           "uv pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu124",
+        ]
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: [
           "uv pip install -r ../requirements.pinokio.txt"
         ]
       }
     },
+
     {
       when: "{{platform === 'win32'}}",
       method: "shell.run",

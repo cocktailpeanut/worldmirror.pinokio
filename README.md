@@ -25,11 +25,11 @@ The upstream repository also splits some binary dependencies by platform. This l
 
 1. Open the app in Pinokio and click `Install`.
 2. Wait for dependency installation to finish. Model weights download automatically from Hugging Face on first run.
-3. Click `Start WorldMirror 2.0`, or use `Start WorldMirror 2.0 Low VRAM (bf16, 640)` on smaller GPUs.
+3. Click `Start WorldMirror 2.0`, or use `Start WorldMirror 2.0 Low VRAM (bf16)` on smaller GPUs.
 4. In the Gradio UI, upload a video or a set of images, then click `Reconstruct`.
 5. Use `Open Outputs` in the launcher after a run to inspect `app/gradio_demo_output`.
 
-For lower VRAM usage, prefer the `Start WorldMirror 2.0 Low VRAM (bf16, 640)` menu item and increase the Gradio upload sampling interval so fewer video frames are extracted before reconstruction.
+For lower VRAM usage, prefer the `Start WorldMirror 2.0 Low VRAM (bf16)` menu item and increase the Gradio upload sampling interval so fewer video frames are extracted before reconstruction.
 
 ## Files And Outputs
 

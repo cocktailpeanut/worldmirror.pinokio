@@ -63,11 +63,10 @@ module.exports = {
         href: "start.js",
       }, {
         icon: "fa-solid fa-gauge-high",
-        text: "Start WorldMirror 2.0 Low VRAM (bf16, 640)",
+        text: "Start WorldMirror 2.0 Low VRAM (bf16)",
         href: "start.js",
         params: {
-          enable_bf16: true,
-          target_size: 640
+          enable_bf16: true
         }
       }]
 
